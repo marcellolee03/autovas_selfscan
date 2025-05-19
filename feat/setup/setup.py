@@ -3,6 +3,9 @@ import socket
 
 
 def setup_autovas(password, openvas_password):
+
+    print('Setting up AutoVAS...')
+
     with open("scripts/setup.sh") as file:
         script = file.read()
         exec_tempscript.exec_tempscript(script, password)

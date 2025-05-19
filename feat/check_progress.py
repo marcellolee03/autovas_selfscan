@@ -9,7 +9,7 @@ def check_progress(password, openvas_password):
             status = report["status"]
             progress = report["progress"]
 
-            print(f"Current '{report["task_name"]} task status': {status} - {progress}")
+            print(f"Current {report["task_name"]} task status: {status} - {progress}")
 
             if progress == "100%" and status == "Done":
                 print("Scan complete! Generating and saving report...")
