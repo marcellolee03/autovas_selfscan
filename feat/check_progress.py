@@ -1,42 +1,26 @@
 from common import exec_tempscript
-import time
 
-def check_progress(password, openvas_password):
+def check_progress(password, openvas_password, task_name):
+    report = get_report(password, openvas_password, task_name)
+
+    status = report['status']
+    progress = report['progress']
+
+    if progress == '100%':
+        print('Scan complete!')
+        return True
+    else:
+        print(f'Status: {status} - Progress: {progress}')
+        return False
+
+
+def get_report(password, openvas_password, task_name):
     reports = list_reports(password, openvas_password)
 
     for report in reports:
-        if report["task_name"] == "self_scan":
-            status = report["status"]
-            progress = report["progress"]
-
-            print(f"Current {report["task_name"]} task status: {status} - {progress}")
-
-            if progress == "100%" and status == "Done":
-                print("Scan complete! Generating and saving report...")
-                save_report(report["id"], password, openvas_password, 'self_scan_report')
-                print("File location: reports/self_scan_report.csv")
-                return 
-            break
-    
-    time.sleep(5)
-    check_progress(password, openvas_password)
-
-
-
-def save_report(report_id, password, openvas_password, filename):
-
-    script = f'''
-    #!/bin/bash
-
-    docker exec greenbone-community-edition-gvmd-1 bash -c "chmod 777 /auto_vas"
-    
-    docker exec --user auto_vas greenbone-community-edition-gvmd-1 bash -c "source /path/to/venv/bin/activate && cd auto_vas && gvm-script --gmp-username admin --gmp-password {openvas_password} socket export-csv-report.gmp.py {report_id} pretty_relatorio"
-    docker cp greenbone-community-edition-gvmd-1:/auto_vas/pretty_relatorio.csv reports/{filename}.csv
-    '''
-
-    exec_tempscript.exec_tempscript(script, password)
-
-    print(f"report saved!")
+        if report['task_name'] == task_name:
+            return report
+    return
 
 
 def list_reports(password, openvas_password):
@@ -73,3 +57,20 @@ def list_reports(password, openvas_password):
         reports.append(relatorio)
 
     return reports
+
+
+def save_report(report_id, password, openvas_password, filename):
+
+    script = f'''
+    #!/bin/bash
+
+    docker exec greenbone-community-edition-gvmd-1 bash -c "chmod 777 /auto_vas"
+    
+    docker exec --user auto_vas greenbone-community-edition-gvmd-1 bash -c "source /path/to/venv/bin/activate && cd auto_vas && gvm-script --gmp-username admin --gmp-password {openvas_password} socket export-csv-report.gmp.py {report_id} pretty_relatorio"
+    docker cp greenbone-community-edition-gvmd-1:/auto_vas/pretty_relatorio.csv reports/{filename}.csv
+    '''
+
+    exec_tempscript.exec_tempscript(script, password)
+
+    print('Report saved!')
+    print(f'File location: reports/{filename}.csv')

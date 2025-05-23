@@ -17,5 +17,6 @@ def start_scan(password, openvas_password):
         gvm-script --gmp-username admin --gmp-password {openvas_password} socket start-scans-from-csv.py startscan.csv"
 
     '''
-
+    
+    print('Starting scan...')
     exec_tempscript.exec_tempscript(script, password)

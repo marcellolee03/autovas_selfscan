@@ -3,7 +3,6 @@ import socket
 
 
 def setup_autovas(password, openvas_password):
-
     print('Setting up AutoVAS...')
 
     with open("scripts/setup.sh") as file:
@@ -22,7 +21,7 @@ def create_target(password, openvas_password):
 
     with open("feat/setup/ip.txt", "w") as file:
         file.write(ip_address)
-        print(f"creating target for {ip_address}...")
+        print(f"Creating target for {ip_address}...")
     
 
     # creating target for localhost
@@ -41,6 +40,8 @@ def create_target(password, openvas_password):
 
 
 def create_task(password, openvas_password):
+    print('Creating task...')
+
     with open("feat/setup/ip.txt", "r") as file:
             localhost = file.read()
 
