@@ -2,14 +2,14 @@ import time
 from getpass import getpass
 
 from common import check_pass
-from feat import generate_prompt, scan, check_progress, ask_deepseek
+from feat import generate_prompt, scan, check_progress, ask_deepseek, ask_gemini
 from feat.setup import setup
 
 
-API_KEY = ''
+API_KEY = 'AIzaSyDyacoxBNh1tn8aB_QCcUslYYHUWb-_iZs'
 API_URL = ''
 
-headers = []
+headers = ['NVT Name', 'Summary', 'Specific Result', 'Vulnerability Detection Method']
 
 password = getpass('Input user password: ')
 openvas_password = getpass('Input OpenVAS admin password: ')
@@ -32,14 +32,14 @@ if check_pass.check_sudo_pass(password):
     check_progress.save_report(report_id, password, openvas_password, 'out')
 
     # Generating shell script w/ Deepseek
-    #prompt = generate_prompt.generate_prompt('results/out.csv', 0, headers)
-    #response = ask_deepseek.ask_deepseek(API_KEY, API_URL, prompt)
+    prompt = generate_prompt.generate_prompt('reports/out.csv', 0, headers)
+    response = ask_gemini.ask_gemini(API_KEY, prompt)
 
     # Ending timer
     finish = time.time()
 
-    #print(response)
-    print(f'time elapsed: {finish - start}')
+    print(response)
+    print(f'time elapsed: {((finish - start)/60):.2f} minutes')
 
 else:
     print("Wrong password. Shutting down.")
