@@ -16,6 +16,9 @@ openvas_password = getpass('Input OpenVAS admin password: ')
 
 if check_pass.check_sudo_pass(password):
 
+    # Starting timer
+    start = time.time()
+
     # Setting everything up on boot up
     setup.setup_autovas(password, openvas_password)
     scan.start_scan(password, openvas_password)
@@ -29,8 +32,14 @@ if check_pass.check_sudo_pass(password):
     check_progress.save_report(report_id, password, openvas_password, 'out')
 
     # Generating shell script w/ Deepseek
-    prompt = generate_prompt.generate_prompt('results/out.csv', 0, headers)
-    response = ask_deepseek.ask_deepseek(API_KEY, API_URL, prompt)
+    #prompt = generate_prompt.generate_prompt('results/out.csv', 0, headers)
+    #response = ask_deepseek.ask_deepseek(API_KEY, API_URL, prompt)
+
+    # Ending timer
+    finish = time.time()
+
+    #print(response)
+    print(f'time elapsed: {finish - start}')
 
 else:
     print("Wrong password. Shutting down.")

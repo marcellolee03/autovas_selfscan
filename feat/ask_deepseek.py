@@ -1,6 +1,5 @@
 import requests
 
-
 def ask_deepseek(API_KEY: str, API_URL: str, prompt: str) -> str:
     headers = {
         'Authorization': f'Bearer {API_KEY}',
