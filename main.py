@@ -6,7 +6,7 @@ from feat import generate_prompt, scan, check_progress, ask_deepseek, ask_gemini
 from feat.setup import setup
 
 
-API_KEY = 'AIzaSyDyacoxBNh1tn8aB_QCcUslYYHUWb-_iZs'
+API_KEY = ''
 API_URL = ''
 
 headers = ['NVT Name', 'Summary', 'Specific Result', 'Vulnerability Detection Method']
