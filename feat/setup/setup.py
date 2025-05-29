@@ -2,7 +2,7 @@ from common import exec_tempscript
 import socket
 
 
-def setup_autovas(password, openvas_password):
+def setup_autovas(password, openvas_password, task_name):
     print('Setting up AutoVAS...')
 
     with open("scripts/setup.sh") as file:
@@ -10,7 +10,7 @@ def setup_autovas(password, openvas_password):
         exec_tempscript.exec_tempscript(script, password)
     
     create_target(password, openvas_password)
-    create_task(password, openvas_password)
+    create_task(password, openvas_password, task_name)
 
 
 def create_target(password, openvas_password):
@@ -39,13 +39,13 @@ def create_target(password, openvas_password):
     exec_tempscript.exec_tempscript(script, password)
 
 
-def create_task(password, openvas_password):
-    print('Creating task...')
+def create_task(password, openvas_password, task_name):
+    print(f'Creating task "{task_name}"...')
 
     with open("feat/setup/ip.txt", "r") as file:
             localhost = file.read()
 
-    csv_content = f'"self_scan","Target for {localhost}","OpenVAS Default","Full and fast",,,,,,,'
+    csv_content = f'"{task_name}","Target for {localhost}","OpenVAS Default","Full and fast",,,,,,,'
 
     with open("feat/setup/task.csv", "w") as file:
         file.write(csv_content)

@@ -67,7 +67,7 @@ def save_report(report_id, password, openvas_password, filename):
     docker exec greenbone-community-edition-gvmd-1 bash -c "chmod 777 /auto_vas"
     
     docker exec --user auto_vas greenbone-community-edition-gvmd-1 bash -c "source /path/to/venv/bin/activate && cd auto_vas && gvm-script --gmp-username admin --gmp-password {openvas_password} socket export-csv-report.gmp.py {report_id} pretty_relatorio"
-    docker cp greenbone-community-edition-gvmd-1:/auto_vas/pretty_relatorio.csv reports/{filename}.csv
+    docker cp greenbone-community-edition-gvmd-1:/auto_vas/pretty_relatorio.csv "reports/{filename}.csv"
     '''
 
     exec_tempscript.exec_tempscript(script, password)
