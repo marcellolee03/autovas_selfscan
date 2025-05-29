@@ -1,10 +1,10 @@
 from common import exec_tempscript
 
 
-def start_scan(password, openvas_password):
+def start_scan(password, openvas_password, taskname):
         
     with open("feat/setup/startscan.csv", "w") as file:
-        file.write("self_scan")
+        file.write(taskname)
     
     script = f'''
     #!/bin/bash
