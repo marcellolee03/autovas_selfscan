@@ -14,7 +14,7 @@ headers = ['CVEs','NVT Name','Port','Port Protocol','Summary', 'Specific Result'
 password = getpass('Input user password: ')
 openvas_password = getpass('Input OpenVAS admin password: ')
 
-taskname = datetime.now().strftime("self_scan_%d-%m-%y_%H:%M")
+taskname = datetime.now().strftime("self_scan_%d-%m-%y_%H-%M")
 
 
 if check_pass.check_sudo_pass(password):
