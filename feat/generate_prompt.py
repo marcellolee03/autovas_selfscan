@@ -1,9 +1,16 @@
 import pandas as pd
+from os import name
 
 def generate_prompt(file_path: str, line:int, headers: list) -> str:
-    
+    if name == 'nt':
+        sistema_operacional = 'windows'
+    elif name == 'posix':
+        sistema_operacional = 'Unix (linux ou macOS)'
+    else:
+        sistema_operacional = name
+
     descriptions = []
-    prompt = '''
+    prompt = f'''
     # INSTRUÇÕES PARA O MODELO DE IA
 
     ## PERSONA
@@ -12,7 +19,9 @@ def generate_prompt(file_path: str, line:int, headers: list) -> str:
     ## TAREFA
     Analise o contexto da vulnerabilidade a seguir e gere um script de shell (compatível com o sistema operacional do localhost) que, ao ser executado, corrija permanentemente a vulnerabilidade descrita.
 
-    ## CONTEXTO DA VULNERABILIDADE\n'''
+    ## CONTEXTO DA VULNERABILIDADE\n
+    Localhost OS: {sistema_operacional}\n
+    '''
 
     df = pd.read_csv(file_path)
     for header in headers:
