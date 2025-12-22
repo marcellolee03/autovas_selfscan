@@ -1,4 +1,4 @@
-# Gerador de Patch Intelegente
+# Gerador de Patch Inteligente
 
 **Solução completa de avaliação de vulnerabilidade e geração de patch inteligente automatizada**
 
