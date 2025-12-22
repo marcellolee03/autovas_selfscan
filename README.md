@@ -39,7 +39,16 @@ cd AutoVAS
 ## Uso
 ### Configuração
 
-1. Seleção de LLM: Modifique a linha 46 em 'src/main.py' baseado na LLM que deseja utilizar:
+1. **Definir API_KEY**: Edite a linha 6 do arquivo 'src/main' para incluir a sua chave da API:
+  - Para Google Gemini: Adicione sua chave de API Google.
+  - Para Deepseek: Adicione sua chave de API do openrouter.
+
+2. **Definir API_URL**: Edite a linha 7 do arquivo 'src/main' para incluir o URL da API:
+  - Para Google Gemini: A constante pode estar vazia.
+  - Para Deepseek: Defina API_URL como "https://openrouter.ai/api/v1/chat/completions"
+    
+
+3. Seleção de LLM: Modifique a linha 46 em 'src/main.py' baseado na LLM que deseja utilizar:
    **Para o Google Gemini:**
    ```python
    response = ask_LLM.ask_gemini(API_KEY, prompt)
