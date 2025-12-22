@@ -20,6 +20,4 @@ Localhost OS: {sistema_operacional}\n
 3.  **SEM BLOCOS DE CÓDIGO MARKDOWN:** Não envolva o script em blocos de código como ` ```bash ` ou ` ```sh `. A resposta deve ser o texto puro do script.
 4.  **AUTOSSUFICIENTE:** O script deve ser completo, autônomo e não deve exigir interação do usuário para ser executado.
 5.  **COMPATIBILIDADE:** O script deve ser compatível com o sistema operacional especificado em 'localhost OS'. Se o sistema operacional não for especificado, assuma um sistema baseado em Linux (como Ubuntu/Debian).
-
-# INÍCIO DO SCRIPT DE CORREÇÃO
 ```
