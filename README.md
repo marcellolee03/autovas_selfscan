@@ -10,6 +10,11 @@
 - **Automação Completa**: Automatiza o processo completamente, desde a detecção até a solução.
 
 
+### Exemplos de Prompts Utilizados
+
+No diretorio 'prompt' do repositório, é possível encontrar o prompt utilizado para a geração dos patches de correção.
+Note que o prompt foi utilizado como uma f string na aplicação principal.
+
 ### Exemplos de Patches Gerados
 
 O repositório contem exemplos reais dos patches gerados com esta solução no diretório `Generated Scripts`.
