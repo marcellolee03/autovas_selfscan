@@ -1,0 +1,82 @@
+Teste,CVEs,Data,Tipo Falha,CVSS(Score Severidade),Severidade,Documentacao Publica(baseado em quantidade de resultados no google x 1000),Correcao_Gemini%,Correcao_DeepSeekV3%,Correcao_DeepSeekR1%,Tempo_Gemini_Segundos,Tempo_DeepSeekV3_Segundos,Tempo_DeepSeekR1_Segundos,Correcao Individual/Agregada
+1vt_tls,CVE-2011-3389,2011,Criptografia Fraca / TLS,4.3,media,52,95.0,95.0,95.0,4.9,6.8,109.4,Agregada
+1vt_tls,CVE-2015-0204,2015,Criptografia Fraca / TLS,4.3,media,33,95.0,95.0,95.0,4.9,6.8,109.4,Agregada
+1vt_tls,CVE-2023-41928,2023,Remote Code Injection / RCE,5.3,media,9,95.0,95.0,95.0,4.9,6.8,109.4,Agregada
+1vt_tls,CVE-2024-41270,2024,Path Traversal,9.1,critico,8,95.0,95.0,95.0,4.9,6.8,109.4,Agregada
+1vt_tls,CVE-2025-3200,2025,Criptografia Fraca / TLS,9.1,critico,213,95.0,95.0,95.0,4.9,6.8,109.4,Agregada
+1vt_twikixss,CVE-2008-5304,2008,	Cross‑Site Scripting (XSS),4.3,media,23,90.0,100.0,100.0,7.6,7.2,121.1,Agregada
+1vt_twikixss,CVE-2008-5305,2008,	Cross‑Site Scripting (XSS),10,critico,23,90.0,100.0,100.0,7.6,7.2,121.1,Agregada
+1vt_http,-,,,,,,100.0,100.0,100.0,05.04,11.7,147.36,Individual
+1vt_endoflife,-,,,,,,33.25,0.0,49.0,4.9,4.7,129.0,Individual
+1vt_apache,CVE-2012-0053,2012,Buffer Overflow / RCE,4.3,media,17,90.0,70.0,100.0,3.6791,6.5403,139.9,Individual
+1vt_jquery,CVE-2012-6708,2012,Cross‑Site Scripting (XSS),6.1,media,17,40.0,90.0,100.0,3.78,4.97,184.5,Individual
+1vt_php,CVE-2012-2311,2012,Remote Code Injection / RCE,5.0,media,39,75.0,60.0,70.0,4.9,12.45,158.12,Agregada
+1vt_php,CVE-2012-2336,2012,Remote Code Injection / RCE,5.0,media,32,75.0,60.0,70.0,4.9,12.45,158.12,Agregada
+1vt_php,CVE-2012-2335,2012,Remote Code Injection / RCE,7.5,alto,52,75.0,60.0,70.0,4.9,12.45,158.12,Agregada
+1vt_php,CVE-2012-1823,2012,Remote Code Injection / RCE,9.8,critico,149,75.0,60.0,70.0,4.9,12.45,158.12,Agregada
+1vt_python,CVE-2024-7592,2012,ReDoS / Parsing / regex,7.5,alto,20,50.0,0.0,80.0,5.79,4.1,142.9,Agregada
+1vt_python,CVE-2024-8088,2024,ReDoS / Parsing / regex,8.7,critico,33,50.0,0.0,80.0,5.79,4.1,142.9,Agregada
+1vt_python,CVE-2024-45490,2024,ReDoS / Parsing / regex,7.5,alto,9,50.0,0.0,80.0,5.79,4.1,142.9,Agregada
+1vt_python,CVE-2024-45491,2024,ReDoS / Parsing / regex,7.3,alto,8,50.0,0.0,80.0,5.79,4.1,142.9,Agregada
+1vt_python,CVE-2024-45492,2024,ReDoS / Parsing / regex,7.3,alto,9,50.0,0.0,80.0,5.79,4.1,142.9,Agregada
+1vt_python,CVE-2024-6232,2024,ReDoS / Parsing / regex,7.5,alto,22,50.0,0.0,80.0,5.79,4.1,142.9,Agregada
+1vt_rexec,CVE-1999-0618,1999,Insecure Service/Acess Control,10,critico,15,100.0,100.0,90.0,3.5385,4.5416,248.4,Individual
+1vt_weak_ssh,-,,,,,,70.0,70.0,90.0,3.3642,5.6713,244.0,Individual
+,,,,,,,,,,,,,
+multi_7vt_popos,CVE-2011-1473,2011,Criptografia Fraca / TLS,5.0,medio,63,82.0,89.2,96.4,8.17,12.1968,118.38,Agregada
+multi_7vt_popos,CVE-2011-5094,2011,Criptografia Fraca / TLS,4.3,medio,20,82.0,89.2,96.4,8.17,12.1968,118.38,Agregada
+multi_7vt_popos,CVE-2013-2566,2013,Weak cypher suits,5.9,medio,39,82.0,89.2,96.4,8.17,12.1968,118.38,Agregada
+multi_7vt_popos,CVE-2015-2808,2015,Weak cypher suits,5.0,medio,37,82.0,89.2,96.4,8.17,12.1968,118.38,Agregada
+multi_7vt_popos,CVE-2015-4000,2015,Criptografia Fraca / TLS,4.3,medio,494,82.0,89.2,96.4,8.17,12.1968,118.38,Agregada
+multi_7vt_popos,CVE-1999-0524,1999,Weak cypher suits,2.1,baixo,15,82.0,89.2,96.4,8.17,12.1968,118.38,Agregada
+,,,,,,,,,,,,,
+multi_65vt_lab,CVE-2024-9287,2024,Remote Code Injection / RCE,7.8,alto,19.9,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2023-36632,2023,ReDoS / Parsing / regex,7.8,alto,1.7,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2023-52425,2023,ReDoS / Parsing / regex,7.5,alto,5.8,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2023-6597,2023,Remote Code Injection / RCE,7.8,alto,30,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2024-3220,2024,Remote Code Injection / RCE,2.3,baixo,80,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2024-3219,2024,XSS,5.1,medio,27,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2024-4030,2024,Remote Code Injection / RCE,7.1,alto,93,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2023-40217,2023,DOS,5.3,medio,6.1,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2023-27043,2023,SSRF FAIL,5.3,medio,6.0,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2024-6923,2024,DOS(Denial Of Service),5.5,medio,20,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2024-0397,2024,DOS(Denial Of Service),7.4,alto,19.3,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2024-4032,2024,Insecure Service/Access Control,7.5,alto,61,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2024-0450,2024,XSS,6.2,medio,20,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2025-0938,2025,Parsing,6.3,medio,72,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2024-11168,2024,Insecure Service/Access Control,6.3,medio,5.8,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+multi_65vt_lab,CVE-2025-1795,2025,Parsing,2.3,baixo,128,55.0,56.95,66.32,11.19,16.3,187.1,Agregada
+,,,,,,,,,,,,,
+multi_66vt_metasploit,CVE-1999-0501,1999,Insecure Default Configuration,4.6,medio,16.8,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-1999-0502,1999,Insecure Service / Access Control,7.5,alto,18,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2001-0645,2001,Remote Code Execution (RCE),7.5,alto,19,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2001-1594,2001,Cross-Site Scripting (XSS),10.0,critico,55,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2002-1809,2002,Information Disclosure,7.5,alto,52,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2003-1567,2003,Denial of Service (DoS),5.8,medio,131,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2004-1532,2004,Cross-Site Scripting (XSS),7.5,alto,80,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2004-2357,2004,SQL Injection,6.4,medio,27.8,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2005-0283,2005,Path Traversal,5.0,medio,219,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2005-3398,2005,Remote Code Execution (RCE),4.3,medio,36,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2006-1451,2006,SQL Injection,7.2,alto,72,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2006-4683,2006,Cross-Site Scripting (XSS),5.0,medio,28,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2007-2554,2007,Configuração insegura,7.5,alto,24,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2007-3008,2007,Remote Code Execution (RCE),4.3,medio,46,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2008-0149,2008,Path Traversal,5.0,medio,417,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2008-7253,2008,Configuração insegura,4.3,medio,16,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2009-0919,2009,Path Traversal,7.5,alto,17,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2009-1339,2009,Information Disclosure,6.0,medio,62,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2010-0386,2010,Remote Code Execution (RCE),4.3,medio,26,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2010-4480,2010,Remote Code Execution (RCE),4.3,medio,90,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2011-0411,2011,Remote Code Execution (RCE),6.8,medio,33,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2012-2223,2012,SQL Injection,4.3,medio,96,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2013-7404,2013,Cross-Site Scripting (XSS),10,critico,18.6,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2014-3419,2014,SQL Injection,7.2,alto,31,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2015-7261,2015,Cross-Site Scripting (XSS),9.8,critico,29,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2016-10158,2016,SQL Injection,7.5,alto,3.5,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2017-8218,2017,Path Traversal,9.8,critico,16.8,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2018-17771,2018,SQL Injection,6.6,medio,1.5,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2020-1938,2020,RCE,9.8,critico,492,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2023-49283,2023,Cross-Site Scripting (XSS),5.3,medio,2.3,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,CVE-2024-22901,2024,SQL Injection,9.8,critico,1.6,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
+multi_66vt_metasploit,"CVE-2008-5304,CVE-2008-5305,CVE-1999-0618,CVE-2020-1938,CVE-2015-4669,CVE-2001-0645,CVE-2002-1809,CVE-2004-1532,CVE-2004-2357,CVE-2006-1451,CVE-2007-2554,CVE-2007-6081,CVE-2009-0919,CVE-2014-3419,CVE-2016-6531,CVE-2018-15719,CVE-2024-22901,CVE-2017-11147,CVE-2016-10158,CVE-2016-10159,CVE-2016-10160,CVE-2016-10161,CVE-2016-10167,CVE-2016-10168,CVE-2012-1823,CVE-2012-2311,CVE-2012-2336,CVE-2012-2335,CVE-2011-2523,CVE-2004-2687,CVE-1999-0501,CVE-1999-0502,CVE-1999-0507,CVE-1999-0508,CVE-2001-1594,CVE-2013-7404,CVE-2014-9198,CVE-2015-7261,CVE-2016-8731,CVE-2017-8218,CVE-2018-9068,CVE-2018-17771,CVE-2018-19063,CVE-2018-19064,CVE-1999-0651,CVE-2014-0224,CVE-2011-0411,CVE-2011-1430,CVE-2011-1431,CVE-2011-1432,CVE-2011-1506,CVE-2011-1575,CVE-2011-1926,CVE-2011-2165,CVE-2009-4898,CVE-1999-0497,CVE-2012-6708,CVE-2018-20212,CVE-2009-1339,CVE-2016-0800,CVE-2014-3566,CVE-2013-2566,CVE-2015-2808,CVE-2015-4000,CVE-2003-1567,CVE-2004-2320,CVE-2004-2763,CVE-2005-3398,CVE-2006-4683,CVE-2007-3008,CVE-2008-7253,CVE-2009-2823,CVE-2010-0386,CVE-2012-2223,CVE-2014-7883,CVE-2008-0149,CVE-2023-49282,CVE-2023-49283,CVE-2024-10486,CVE-2011-1473,CVE-2011-5094,CVE-2005-0283,CVE-1999-0678,CVE-2011-3389,CVE-2015-0204,CVE-2023-41928,CVE-2024-41270,CVE-2025-3200,CVE-2012-0053,CVE-2010-4480,CVE-2011-4969
+",,,10,critico,,40.2,48.64,69.6,37.57,65.0,125.9,Agregada
