@@ -54,7 +54,7 @@ cd AutoVAS
    response = ask_LLM.ask_gemini(API_KEY, prompt)
    ```
    
-   **Para o DeepSeek:**
+   **For DeepSeek:**
    ```python
    response = ask_LLM.ask_deepseek(API_KEY, API_URL, prompt)
    ```
